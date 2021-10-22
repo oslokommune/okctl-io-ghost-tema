@@ -1,0 +1,69 @@
+// :not(pre)>code[class*=language-], pre[class*=language-], :not(pre)>code  {
+//     background-color: red;
+// }
+div.code-toolbar {
+	position: relative;
+}
+
+div.code-toolbar > .toolbar {
+	position: absolute;
+	top: 0px;
+	left: 0;
+	right: 0;
+	background-color: var(--code-header);
+	color: $white;
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5rem 1.5rem;
+	border-radius: 5px 5px 0px 0px;
+	line-height: 1.5;
+}
+
+/* Separate line b/c rules are thrown out if selector is invalid.
+   IE11 and old Edge versions don't support :focus-within. */
+div.code-toolbar:focus-within > .toolbar {
+	opacity: 1;
+}
+
+div.code-toolbar > .toolbar a {
+	cursor: pointer;
+}
+
+div.code-toolbar > .toolbar button {
+	background: none;
+	border: 0;
+	color: inherit;
+	font: inherit;
+	line-height: normal;
+	overflow: visible;
+	padding: 0;
+	height: 28px;
+	-webkit-user-select: none; /* for button */
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+div.code-toolbar > .toolbar a,
+div.code-toolbar > .toolbar button {
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	background: var(--theme-color);
+	color: $white;
+	font-size: 0.875rem;
+	padding: 4px 8px;
+	border-radius: 3px;
+	transition: all 0.25s;
+	&:hover {
+		background-color: var(--theme-color-lighten-10);
+	}
+}
+div.code-toolbar > .toolbar span {
+    letter-spacing: 0.5px;
+	color: darken($white, 25);
+	font-size: 0.875rem;
+    border-radius: 4px;
+    transition: all 0.25s;
+}
+div.code-toolbar > .toolbar button {
+    cursor: pointer;
+}

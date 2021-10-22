@@ -1,0 +1,52 @@
+.subscription-description {
+    font-size: 1.125rem;
+}
+.subscriber-info {
+    margin: 2rem 0;
+    background-color: var(--light-bg-color);
+    padding: 1rem;
+    border-radius: 7px;
+}
+.subscription-expiration-warning {
+    color: var(--error);
+}
+.subscriber-detail {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    .label {
+        font-weight: 700;
+        color: var(--text-color-dark);
+        margin-right: 0.5rem;
+    }
+}
+.subscribe-form {
+    margin-top: 32px;
+    .message-success, .message-error {
+        margin-top: 16px;
+        border-radius: 5px;
+        padding: 8px 16px;
+        display: none;
+        color: $white;
+    }
+    .message-success {
+        background-color: var(--success);
+    }
+    .message-error {
+        background-color: var(--error);
+    }
+    &.success {
+        .message-success {
+            display: inline-block;
+        }
+    }
+    &.error {
+        .message-error {
+            display: inline-block;
+        }
+    }
+}
+.form-field-wrap {
+    .btn-submit {
+        width: 100%;
+    }
+}

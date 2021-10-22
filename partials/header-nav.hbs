@@ -1,0 +1,21 @@
+<nav class="nav-wrap">
+    <ul class="nav-list">
+        {{navigation}}
+        {{#if @member}}
+        <li class="nav-item member-link">
+            <a class="nav-item" href="/account/">{{t "Account"}}</a>
+        </li>
+        <li class="nav-item member-link">
+            <a class="" href="#signout" data-members-signout>{{t "Sign out"}}</a>
+        </li>
+        {{else}}
+        <li class="nav-item member-link">
+            <a class="" href="/signin/">{{t "Log in"}}</a>
+        </li>
+        <li class="nav-item member-link">
+            <a class="nav-btn" href="/signup/">{{t "Sign up"}}</a>
+        </li>
+        {{/if}}
+        <li class="nav-item"><a href="#" class="nav-btn">{{> icons/github}}{{t "GitHub"}}</a></li>
+    </ul>
+</nav>

@@ -1,0 +1,19 @@
+.error-wrap {
+    margin: 0 auto;
+    max-width: 760px;
+    .error-code {
+        font-size: 6rem;
+        font-weight: 700;
+        line-height: 1.2;
+        color: var(--theme-color);
+        border-radius: 8px;
+        display: inline-flex;
+    }
+    .error-message {
+        margin-bottom: 16px;
+    }
+    .message-manual {
+        margin-bottom: 32px;
+        font-size: 1.25rem;
+    }
+}

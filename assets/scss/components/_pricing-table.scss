@@ -1,0 +1,50 @@
+.pricing-table-wrap {
+    align-items: stretch;
+    justify-content: center;
+}
+.pricing-table {
+    flex: 1 1 100%;
+    flex-direction: column;
+    margin: 1rem;
+    box-shadow: var(--shadow);
+    background-color: var(--body-bg);
+    padding: 2rem;
+    border-radius: 9px;
+    transition: border .2s;
+}
+@media (min-width: 768px) {
+    .pricing-table-wrap {
+        margin-left: -1rem;
+        margin-right: -1rem;
+    }
+    .pricing-table {
+        flex: 0 1 calc(50% - 3rem);
+    }
+}
+.pricing-table-title {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+.price {
+    margin-bottom: 1rem;
+    .currency, .value {
+        font-size: 4.5rem;
+        font-weight: 700;
+        color: var(--text-color-dark);
+    }
+    .duration {
+        text-transform: uppercase;
+    }
+}
+.table-details {
+    flex-grow: 1;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li {
+        margin-bottom: 1.25rem;
+    }
+}
+.table-footer {
+    margin: 1rem 0;
+}

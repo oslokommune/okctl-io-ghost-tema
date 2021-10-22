@@ -1,0 +1,94 @@
+.js-sidebar{
+    will-change: min-height;
+    display: none;
+}
+
+.js-sidebar-inner{
+    transform: translate(0, 0); /* For browsers don't support translate3d. */
+    transform: translate3d(0, 0, 0);
+    will-change: position, transform;
+    z-index: 1;
+}
+.sidebar-form-wrap {
+    margin-bottom: 1.25rem;
+}
+.sidebar-search-form {
+    .search-input {
+        padding-right: 32px;
+        margin-bottom: 0.5rem;
+    }
+    .input-wrap {
+        position: relative;
+        svg {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            height: 16px;
+            width: 16px;
+            color: var(--text-color-light);
+        }
+    }
+}
+.sidebar-form-wrap {
+    .search-result {
+        max-height: calc(100vh - 100px );
+        overflow: auto;
+        .result-item {
+            a {
+                .excerpt {
+                    -webkit-line-clamp: 3;
+                }
+            }
+        }
+    }
+}
+.sidebar-navigation {
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        a {
+            color: var(--text-color-light);
+            &:hover {
+                color: var(--theme-color);
+            }
+        }
+        li {
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
+            &.current {
+                > a {
+                    color: var(--theme-color);
+                }
+            }
+            ul {
+                padding-left: 1rem;
+                margin-top: 0.75rem;
+                margin-left: 3px;
+                border-left: 1px solid var(--border-color);
+                display: none;
+                li {
+                    &.current {
+                        position: relative;
+                        &:before {
+                            content: "";
+                            display: block;
+                            width: 5px;
+                            height: 100%;
+                            border-radius: 3px;
+                            background-color: var(--theme-color);
+                            position: absolute;
+                            left: -19px;
+                            top: 0px;
+                        }
+                    }
+                }
+            }
+            &.open {
+                > ul {
+                    display: block;
+                }
+            }
+        }
+    }
+}
