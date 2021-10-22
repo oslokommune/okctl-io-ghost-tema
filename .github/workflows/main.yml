@@ -1,10 +1,33 @@
-name: Deploy Theme
+name: Build & Deploy Theme
 on:
   push:
     branches:
       - master
       - main
 jobs:
+  # Build CSS files from .scss
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      # Set up node.js
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npm ci
+      - run: gulp
+
+      - name: Commit files
+        run: |
+          git config --local user.name ${{ github.actor }}
+          git add -A
+          git commit -m "Gulp output"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.REPO_GITHUB_TOKEN }}
+
   deploy:
     runs-on: ubuntu-18.04
     steps:
