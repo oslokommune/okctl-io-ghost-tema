@@ -25,7 +25,7 @@ jobs:
           files: 'partials/api-key.hbs'
           output-filename: 'partials/api-key.hbs'
           html-escape: true
-          dry-run: false
+          dry-run: true
 
       # Deploy the theme to Ghost using the Admin API key
       - uses: TryGhost/action-deploy-theme@v1.4.1
