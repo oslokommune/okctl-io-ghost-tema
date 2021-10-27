@@ -17,18 +17,12 @@ jobs:
           node-version: 12
       - run: npm ci
       - run: gulp build
-
-      # Inject the search API key into the output
-      - name: Inject Environment Variables
-        uses: pedrolamas/handlebars-action@v1.0.4
-        with:
-          files: 'partials/api-key.hbs'
-          output-filename: 'partials/api-key.hbs'
-          html-escape: true
-          dry-run: true
+      - run: echo ${{ secrets.GHOST_SEARCH_API_KEY }} > partials/api-key.hbs
 
       # Deploy the theme to Ghost using the Admin API key
       - uses: TryGhost/action-deploy-theme@v1.4.1
         with:
           api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
           api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}
+
+      working-directory: .
