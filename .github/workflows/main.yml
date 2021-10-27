@@ -18,13 +18,6 @@ jobs:
       - run: npm ci
       - run: gulp build
 
-      - name: Commit files
-        run: |
-          git config --local user.name ${{ github.actor }}
-          git add -A
-          git commit -m "Gulp output"
-
-
       - name: Inject Environment Variables
         uses: pedrolamas/handlebars-action@v1.0.4
         with:
@@ -33,6 +26,12 @@ jobs:
           delete-input-file: true
           html-escape: true
           dry-run: false
+
+      - name: Commit files
+        run: |
+          git config --local user.name ${{ github.actor }}
+          git add -A
+          git commit -m "Gulp output"
 
       - name: Push changes
         uses: ad-m/github-push-action@master
