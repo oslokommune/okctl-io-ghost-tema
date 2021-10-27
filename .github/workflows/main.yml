@@ -18,15 +18,6 @@ jobs:
       - run: npm ci
       - run: gulp build
 
-      - name: Inject Environment Variables
-        uses: pedrolamas/handlebars-action@v1.0.4
-        with:
-          files: 'partials/api-key.template'
-          output-filename: 'partials/api-key.hbs'
-          delete-input-file: true
-          html-escape: true
-          dry-run: false
-
       - name: Commit files
         run: |
           git config --local user.name ${{ github.actor }}
@@ -44,6 +35,13 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@master
+      - name: Inject Environment Variables
+        uses: pedrolamas/handlebars-action@v1.0.4
+        with:
+          files: 'partials/api-key.hbs'
+          output-filename: 'partials/api-key.hbs'
+          html-escape: true
+          dry-run: false
       - uses: TryGhost/action-deploy-theme@v1.4.1
         with:
           api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
