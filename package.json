@@ -2,7 +2,7 @@
     "name": "digidocs",
     "description": "Minimal personal blog theme",
     "demo": "http://digidocs.gbjsolution.com",
-    "version": "2.0.1.1",
+    "version": "2.0.1.2",
     "engines": {
         "ghost": ">=4.0.0",
         "ghost-api": "v4"
