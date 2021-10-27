@@ -38,8 +38,8 @@ jobs:
       - name: Inject Environment Variables
         uses: pedrolamas/handlebars-action@v1.0.4
         with:
-          files: 'partials/api-key.hbs'
-          output-filename: 'partials/api-key.hbs'
+          files: 'partials/api-key.hbs.hbs'
+          output-filename: 'partials/api-key.hbs.hbs'
           html-escape: true
           dry-run: false
       - uses: TryGhost/action-deploy-theme@v1.4.1
