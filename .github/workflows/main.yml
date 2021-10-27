@@ -18,6 +18,7 @@ jobs:
       - run: npm ci
       - run: gulp build
       - run: echo ${{ secrets.GHOST_SEARCH_API_KEY }} > partials/api-key.hbs
+      - run: cat partials/api-key.hbs
 
       # Deploy the theme to Ghost using the Admin API key
       - uses: TryGhost/action-deploy-theme@v1.4.1
