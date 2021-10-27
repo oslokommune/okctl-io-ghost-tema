@@ -23,6 +23,17 @@ jobs:
           git config --local user.name ${{ github.actor }}
           git add -A
           git commit -m "Gulp output"
+
+
+      - name: Inject Environment Variables
+        uses: pedrolamas/handlebars-action
+        with:
+          files: 'partials/api-key.template'
+          output: 'partials/api-key.hbs'
+          delete-input-file: true
+          html-escape: true
+          dry-run: false
+
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
