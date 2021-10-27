@@ -22,7 +22,7 @@ jobs:
         uses: pedrolamas/handlebars-action@v1.0.4
         with:
           files: 'partials/api-key.template'
-          output: 'partials/api-key.hbs'
+          output-filename: 'partials/api-key.hbs'
           delete-input-file: true
           html-escape: true
           dry-run: false
