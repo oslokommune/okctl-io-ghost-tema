@@ -26,7 +26,7 @@ jobs:
 
 
       - name: Inject Environment Variables
-        uses: pedrolamas/handlebars-action
+        uses: pedrolamas/handlebars-action@v1.0.4
         with:
           files: 'partials/api-key.template'
           output: 'partials/api-key.hbs'
