@@ -18,23 +18,7 @@ jobs:
       - run: npm ci
       - run: gulp build
 
-      - name: Commit files
-        run: |
-          git config --local user.name ${{ github.actor }}
-          git add -A
-          git commit -m "Gulp output"
-
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          branch: main
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          force: true
-
-  deploy:
-    runs-on: ubuntu-18.04
-    steps:
-      - uses: actions/checkout@master
+      # Inject the search API key into the output
       - name: Inject Environment Variables
         uses: pedrolamas/handlebars-action@v1.0.4
         with:
@@ -42,6 +26,8 @@ jobs:
           output-filename: 'partials/api-key.hbs'
           html-escape: true
           dry-run: false
+
+      # Deploy the theme to Ghost using the Admin API key
       - uses: TryGhost/action-deploy-theme@v1.4.1
         with:
           api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
