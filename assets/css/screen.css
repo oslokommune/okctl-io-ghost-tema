@@ -3,6 +3,11 @@
     Please do not re order any import,
     It can break some style
 =====================================================*/
+@font-face {
+  font-family: 'OsloSans';
+  src: url("assets/fonts/OsloSans-Regular.otf") format("opentype");
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -875,7 +880,7 @@ html {
 /*** PLEASE DO NOT EDIT BELOW THIS LINE ***/
 :root {
   --body-bg: #ffffff;
-  --theme-color: #4183F2;
+  --theme-color: red;
   --theme-color-lighten-10: #548ff3;
   --theme-color-lighten-50: #a0c1f9;
   --light-bg-color: #F5F8FC;
@@ -888,6 +893,7 @@ html {
   --code-header: #060d18;
   --success: #0ca910;
   --error: #f0134d;
+  --button-color: #ccc;
 }
 
 html {
@@ -899,7 +905,7 @@ html {
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "OsloSans", "Comic Sans MS", "Comic Sans", sans-serif;
   color: #505763;
   color: var(--text-color-normal);
   line-height: 1.5;
@@ -909,7 +915,7 @@ body {
 }
 
 h1 {
-  font-family: "Lato", sans-serif;
+  font-family: "OsloSans", "Comic Sans MS", "Comic Sans", sans-serif;
   color: #333840;
   color: var(--text-color-dark);
   font-weight: 700;
@@ -919,7 +925,7 @@ h1 {
 }
 
 h2 {
-  font-family: "Lato", sans-serif;
+  font-family: "OsloSans", "Comic Sans MS", "Comic Sans", sans-serif;
   color: #333840;
   color: var(--text-color-dark);
   font-weight: 700;
@@ -929,7 +935,7 @@ h2 {
 }
 
 h3 {
-  font-family: "Lato", sans-serif;
+  font-family: "OsloSans", "Comic Sans MS", "Comic Sans", sans-serif;
   color: #333840;
   color: var(--text-color-dark);
   font-weight: 700;
@@ -939,7 +945,7 @@ h3 {
 }
 
 h4 {
-  font-family: "Lato", sans-serif;
+  font-family: "OsloSans", "Comic Sans MS", "Comic Sans", sans-serif;
   color: #333840;
   color: var(--text-color-dark);
   font-weight: 700;
@@ -949,7 +955,7 @@ h4 {
 }
 
 h5 {
-  font-family: "Lato", sans-serif;
+  font-family: "OsloSans", "Comic Sans MS", "Comic Sans", sans-serif;
   color: #333840;
   color: var(--text-color-dark);
   font-weight: 700;
@@ -959,7 +965,7 @@ h5 {
 }
 
 h6 {
-  font-family: "Lato", sans-serif;
+  font-family: "OsloSans", "Comic Sans MS", "Comic Sans", sans-serif;
   color: #333840;
   color: var(--text-color-dark);
   font-weight: 700;
@@ -969,7 +975,7 @@ h6 {
 }
 
 .h1 {
-  font-family: "Lato", sans-serif;
+  font-family: "OsloSans", "Comic Sans MS", "Comic Sans", sans-serif;
   color: #333840;
   color: var(--text-color-dark);
   font-weight: 700;
@@ -979,7 +985,7 @@ h6 {
 }
 
 .h2 {
-  font-family: "Lato", sans-serif;
+  font-family: "OsloSans", "Comic Sans MS", "Comic Sans", sans-serif;
   color: #333840;
   color: var(--text-color-dark);
   font-weight: 700;
@@ -989,7 +995,7 @@ h6 {
 }
 
 .h3 {
-  font-family: "Lato", sans-serif;
+  font-family: "OsloSans", "Comic Sans MS", "Comic Sans", sans-serif;
   color: #333840;
   color: var(--text-color-dark);
   font-weight: 700;
@@ -999,7 +1005,7 @@ h6 {
 }
 
 .h4 {
-  font-family: "Lato", sans-serif;
+  font-family: "OsloSans", "Comic Sans MS", "Comic Sans", sans-serif;
   color: #333840;
   color: var(--text-color-dark);
   font-weight: 700;
@@ -1009,7 +1015,7 @@ h6 {
 }
 
 .h5 {
-  font-family: "Lato", sans-serif;
+  font-family: "OsloSans", "Comic Sans MS", "Comic Sans", sans-serif;
   color: #333840;
   color: var(--text-color-dark);
   font-weight: 700;
@@ -1019,7 +1025,7 @@ h6 {
 }
 
 .h6 {
-  font-family: "Lato", sans-serif;
+  font-family: "OsloSans", "Comic Sans MS", "Comic Sans", sans-serif;
   color: #333840;
   color: var(--text-color-dark);
   font-weight: 700;
@@ -1077,7 +1083,7 @@ h1[id] .js-anchor svg, h2[id] .js-anchor svg, h3[id] .js-anchor svg, h4[id] .js-
 
 a {
   text-decoration: none;
-  color: #4183F2;
+  color: red;
   color: var(--theme-color);
   outline: 0;
   transition: all 0.25s;
@@ -1085,7 +1091,7 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: #4183F2;
+  color: red;
   color: var(--theme-color);
   outline: 0;
   transition: all 0.25s;
@@ -1093,7 +1099,7 @@ a:hover {
 
 a:focus {
   text-decoration: none;
-  color: #4183F2;
+  color: red;
   color: var(--theme-color);
   outline: 0;
   transition: all 0.25s;
@@ -1138,33 +1144,33 @@ svg {
 }
 
 .btn-primary {
-  background-color: #4183F2;
+  background-color: red;
   background-color: var(--theme-color);
-  border-color: #4183F2;
+  border-color: red;
   border-color: var(--theme-color);
   color: #fff;
 }
 
 .btn-primary.disabled {
-  background-color: #4183F2;
+  background-color: red;
   background-color: var(--theme-color);
-  border-color: #4183F2;
+  border-color: red;
   border-color: var(--theme-color);
   color: #fff;
 }
 
 .btn-primary:disabled {
-  background-color: #4183F2;
+  background-color: red;
   background-color: var(--theme-color);
-  border-color: #4183F2;
+  border-color: red;
   border-color: var(--theme-color);
   color: #fff;
 }
 
 input[type='submit'] {
-  background-color: #4183F2;
+  background-color: red;
   background-color: var(--theme-color);
-  border-color: #4183F2;
+  border-color: red;
   border-color: var(--theme-color);
   color: #fff;
 }
@@ -1247,17 +1253,17 @@ input[type='submit']:not(:disabled):not(.disabled):active {
 }
 
 .btn-secondary:hover {
-  background-color: #4183F2;
+  background-color: red;
   background-color: var(--theme-color);
-  border-color: #4183F2;
+  border-color: red;
   border-color: var(--theme-color);
   color: #fff;
 }
 
 .btn-secondary:not(:disabled):not(.disabled):active {
-  background-color: #4183F2;
+  background-color: red;
   background-color: var(--theme-color);
-  border-color: #4183F2;
+  border-color: red;
   border-color: var(--theme-color);
   color: #fff;
 }
@@ -1268,35 +1274,35 @@ input[type='submit']:not(:disabled):not(.disabled):active {
 }
 
 .btn-outline-primary {
-  color: #4183F2;
+  color: red;
   color: var(--theme-color);
-  border-color: #4183F2;
+  border-color: red;
   border-color: var(--theme-color);
 }
 
 .btn-outline-primary:hover {
   color: #000;
-  background-color: #4183F2;
+  background-color: red;
   background-color: var(--theme-color);
-  border-color: #4183F2;
+  border-color: red;
   border-color: var(--theme-color);
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled):active {
   color: #000;
-  background-color: #4183F2;
+  background-color: red;
   background-color: var(--theme-color);
-  border-color: #4183F2;
+  border-color: red;
   border-color: var(--theme-color);
 }
 
 .btn-outline-primary:focus {
-  box-shadow: 0 0 0 2px rgba(#4183F2, 0.4);
+  box-shadow: 0 0 0 2px rgba(red, 0.4);
   box-shadow: 0 0 0 2px rgba(var(--theme-color), 0.4);
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled):active:focus {
-  box-shadow: 0 0 0 2px rgba(#4183F2, 0.4);
+  box-shadow: 0 0 0 2px rgba(red, 0.4);
   box-shadow: 0 0 0 2px rgba(var(--theme-color), 0.4);
 }
 
@@ -1309,27 +1315,27 @@ input[type='submit']:not(:disabled):not(.disabled):active {
 
 .btn-outline-secondary:hover {
   color: #000;
-  background-color: #4183F2;
+  background-color: red;
   background-color: var(--theme-color);
-  border-color: #4183F2;
+  border-color: red;
   border-color: var(--theme-color);
 }
 
 .btn-outline-secondary:not(:disabled):not(.disabled):active {
   color: #000;
-  background-color: #4183F2;
+  background-color: red;
   background-color: var(--theme-color);
-  border-color: #4183F2;
+  border-color: red;
   border-color: var(--theme-color);
 }
 
 .btn-outline-secondary:focus {
-  box-shadow: 0 0 0 2px rgba(#4183F2, 0.4);
+  box-shadow: 0 0 0 2px rgba(red, 0.4);
   box-shadow: 0 0 0 2px rgba(var(--theme-color), 0.4);
 }
 
 .btn-outline-secondary:not(:disabled):not(.disabled):active:focus {
-  box-shadow: 0 0 0 2px rgba(#4183F2, 0.4);
+  box-shadow: 0 0 0 2px rgba(red, 0.4);
   box-shadow: 0 0 0 2px rgba(var(--theme-color), 0.4);
 }
 
@@ -1532,7 +1538,7 @@ textarea {
 
 input[type='text']:focus {
   background: transparent;
-  border: 1px solid #4183F2;
+  border: 1px solid red;
   border: 1px solid var(--theme-color);
   color: #505763;
   color: var(--text-color-normal);
@@ -1542,7 +1548,7 @@ input[type='text']:focus {
 
 input[type='email']:focus {
   background: transparent;
-  border: 1px solid #4183F2;
+  border: 1px solid red;
   border: 1px solid var(--theme-color);
   color: #505763;
   color: var(--text-color-normal);
@@ -1552,7 +1558,7 @@ input[type='email']:focus {
 
 input[type='url']:focus {
   background: transparent;
-  border: 1px solid #4183F2;
+  border: 1px solid red;
   border: 1px solid var(--theme-color);
   color: #505763;
   color: var(--text-color-normal);
@@ -1562,7 +1568,7 @@ input[type='url']:focus {
 
 textarea:focus {
   background: transparent;
-  border: 1px solid #4183F2;
+  border: 1px solid red;
   border: 1px solid var(--theme-color);
   color: #505763;
   color: var(--text-color-normal);
@@ -1641,14 +1647,14 @@ textarea {
 }
 
 blockquote {
-  font-family: "Lato", sans-serif;
+  font-family: "OsloSans", "Comic Sans MS", "Comic Sans", sans-serif;
   font-size: 1.5rem;
   line-height: 1.5;
   padding: 1.5rem;
   margin: 2.5rem 0;
   color: #333840;
   color: var(--text-color-dark);
-  border-left: 4px solid #4183F2;
+  border-left: 4px solid red;
   border-left: 4px solid var(--theme-color);
   background-color: #F5F8FC;
   background-color: var(--light-bg-color);
@@ -1822,8 +1828,7 @@ hr.small {
 }
 
 .site-header {
-  background-color: #4183F2;
-  background-color: var(--theme-color);
+  background-color: #f9c66b;
 }
 
 .header-inner {
@@ -1845,11 +1850,11 @@ hr.small {
   line-height: 40px;
   margin-top: -4px;
   font-weight: 700;
-  color: #fff;
+  color: #000;
 }
 
 .logo-text:hover, .logo-text:focus {
-  color: #fff;
+  color: #000;
 }
 
 .logo-image {
@@ -1872,20 +1877,19 @@ hr.small {
 }
 
 .nav-list .nav-item a {
-  color: #fff;
+  color: #000;
   position: relative;
   line-height: 40px;
   text-transform: capitalize;
 }
 
 .nav-list .nav-item a:hover {
-  color: #e6e6e6;
+  color: #1a1a1a;
 }
 
 .nav-list .nav-item a.nav-btn {
-  background-color: #fff;
-  color: #333840;
-  color: var(--text-color-dark);
+  background-color: #000;
+  color: #fff;
   height: 40px;
   display: block;
   padding: 0px 16px;
@@ -1905,7 +1909,7 @@ hr.small {
 }
 
 .nav-list .nav-item.nav-item-current a {
-  color: #e6e6e6;
+  color: #1a1a1a;
 }
 
 .menu-icon {
@@ -1923,7 +1927,7 @@ hr.small {
 .menu-icon .line {
   width: 100%;
   height: 3px;
-  background-color: #fff;
+  background-color: #000;
   position: absolute;
   right: 0;
   transition: all 0.3s;
@@ -1942,7 +1946,7 @@ hr.small {
 }
 
 .menu-icon:hover .line {
-  background-color: #e6e6e6;
+  background-color: #1a1a1a;
 }
 
 .menu-icon.menu-icon-close .line {
@@ -1967,11 +1971,11 @@ hr.small {
 }
 
 .menu-icon.menu-icon-close:hover .line {
-  background-color: #e6e6e6;
+  background-color: #1a1a1a;
 }
 
 .mobile-nav-wrap {
-  background: #4183F2;
+  background: red;
   background: var(--theme-color);
   position: fixed;
   top: 0;
@@ -2062,7 +2066,7 @@ hr.small {
 }
 
 .breadcrumb a:hover {
-  color: #4183F2;
+  color: red;
   color: var(--theme-color);
 }
 
@@ -2284,7 +2288,7 @@ hr.small {
 }
 
 .topic-card .topic-name a:hover {
-  color: #4183F2;
+  color: red;
   color: var(--theme-color);
 }
 
@@ -2326,7 +2330,7 @@ hr.small {
 }
 
 .topic-card .topic-post-list li a:hover {
-  color: #4183F2;
+  color: red;
   color: var(--theme-color);
 }
 
@@ -2369,7 +2373,7 @@ hr.small {
 }
 
 .faq-item a:hover {
-  color: #4183F2;
+  color: red;
   color: var(--theme-color);
 }
 
@@ -2438,7 +2442,7 @@ hr.small {
 }
 
 .secondary-nav .nav-item a:hover {
-  color: #4183F2;
+  color: red;
   color: var(--theme-color);
 }
 
@@ -2453,7 +2457,7 @@ hr.small {
 }
 
 .social-links a:hover {
-  color: #4183F2;
+  color: red;
   color: var(--theme-color);
 }
 
@@ -2473,7 +2477,7 @@ hr.small {
 }
 
 .copyright a:hover {
-  color: #4183F2;
+  color: red;
   color: var(--theme-color);
 }
 
@@ -2481,7 +2485,7 @@ hr.small {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #4183F2;
+  background-color: red;
   background-color: var(--theme-color);
   opacity: 0;
   line-height: 1;
@@ -2555,7 +2559,7 @@ hr.small {
 }
 
 .post-list-wrap .post-card a:hover .post-title {
-  color: #4183F2;
+  color: red;
   color: var(--theme-color);
 }
 
@@ -2622,7 +2626,7 @@ hr.small {
 }
 
 .sidebar-navigation ul a:hover {
-  color: #4183F2;
+  color: red;
   color: var(--theme-color);
 }
 
@@ -2632,7 +2636,7 @@ hr.small {
 }
 
 .sidebar-navigation ul li.current > a {
-  color: #4183F2;
+  color: red;
   color: var(--theme-color);
 }
 
@@ -2655,7 +2659,7 @@ hr.small {
   width: 5px;
   height: 100%;
   border-radius: 3px;
-  background-color: #4183F2;
+  background-color: red;
   background-color: var(--theme-color);
   position: absolute;
   left: -19px;
@@ -2899,7 +2903,7 @@ hr.small {
 }
 
 .single-post-wrap .post-footer .icons a:hover {
-  color: #4183F2;
+  color: red;
   color: var(--theme-color);
 }
 
@@ -2952,7 +2956,7 @@ hr.small {
 }
 
 .toc-wrap .toc a:hover {
-  color: #4183F2;
+  color: red;
   color: var(--theme-color);
   text-decoration: underline;
 }
@@ -2982,7 +2986,7 @@ hr.small {
 }
 
 .sidebar-navigation .version-list .current a {
-  background: #4183F2;
+  background: red;
   background: var(--theme-color);
   color: #fff;
 }
@@ -3042,7 +3046,7 @@ hr.small {
 }
 
 .prev-next-wrap a:hover .label {
-  color: #4183F2;
+  color: red;
   color: var(--theme-color);
 }
 
@@ -3312,7 +3316,7 @@ div.code-toolbar > .toolbar button {
 div.code-toolbar > .toolbar a {
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  background: #4183F2;
+  background: red;
   background: var(--theme-color);
   color: #fff;
   font-size: 0.875rem;
@@ -3324,7 +3328,7 @@ div.code-toolbar > .toolbar a {
 div.code-toolbar > .toolbar button {
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  background: #4183F2;
+  background: red;
   background: var(--theme-color);
   color: #fff;
   font-size: 0.875rem;
@@ -3427,7 +3431,7 @@ div.code-toolbar > .toolbar button {
   font-size: 6rem;
   font-weight: 700;
   line-height: 1.2;
-  color: #4183F2;
+  color: red;
   color: var(--theme-color);
   border-radius: 8px;
   display: inline-flex;

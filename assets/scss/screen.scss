@@ -4,7 +4,7 @@
 =====================================================*/
 @font-face {
   font-family: 'OsloSans';
-  src: url("assets/fonts/OsloSans-Regular.otf");
+  src: url('assets/fonts/OsloSans-Regular.otf') format('opentype');
 }
 
 @import 'components/normalize';
