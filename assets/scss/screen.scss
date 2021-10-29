@@ -2,6 +2,11 @@
     Please do not re order any import,
     It can break some style
 =====================================================*/
+@font-face {
+  font-family: 'OsloSans';
+  src: url("assets/fonts/OsloSans-Regular.otf") format('opentype');
+}
+
 @import 'components/normalize';
 @import 'components/grid';
 @import 'components/color-and-font';
@@ -21,3 +26,4 @@
 @import 'components/tlite';
 @import 'components/pricing-table';
 @import 'components/media-query';
+
