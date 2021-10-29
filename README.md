@@ -1,3 +1,5 @@
+![Logo](.github/assets/img/github-header.png)
+
 # OKCTL.io Ghost.io Theme
 
 Based on the DigiDocs theme from Themeforest and the [custom okctl](https://github.com/oslokommune/okctl-ghost-theme) theme by @DanielElisenberg.
