@@ -5,7 +5,7 @@
 =====================================================*/
 @font-face {
   font-family: 'OsloSans';
-  src: url("assets/fonts/OsloSans-Regular.otf") format("opentype");
+  src: url("../fonts/OsloSans-Regular.otf") format("opentype");
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
