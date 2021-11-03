@@ -20,16 +20,18 @@
                     </div>
                     {{/if}}
                     {{#if access}}
+                    <!--
                     <div class="toc-wrap" id="toc-wrap">
                         <div class="toc-title h4">{{t "Table of contents"}}</div>
                     </div>
+                    -->
                     {{/if}}
                     <div class="post-content{{^if access}} no-access{{/if}}" id="post-content">
                         {{#if access}}
                         {{content}}
                         {{else}}
                         {{{html}}}
-                        {{> members/member-upgrade-cta}}
+                        {{!> members/member-upgrade-cta}}
                         {{/if}}
                     </div>
                     <div class="post-footer">
