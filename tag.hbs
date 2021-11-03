@@ -7,9 +7,9 @@
             <div class="col-lg-9 topic-archive">
                 {{#tag}}
                 <h1 class="topic-name">{{name}}</h1>
-                <div class="topic-description">
-                    {{description}}
-                </div>
+                <!-- <div class="topic-description">
+                    {{! description}}
+                </div> -->
                 {{/tag}}
                 <div class="post-list-wrap">
                     {{#get "posts" filter="tag:{{tag.slug}}" limit="all" order="published_at asc"}}
