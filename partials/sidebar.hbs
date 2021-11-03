@@ -4,7 +4,7 @@
             {{> sidebar-search}}
             <div class="sidebar-navigation">
                 <ul>
-                {{#get "tags" limit="all" include="count.posts" order="published_at asc" filter="slug:-faq"}}
+                {{#get "tags" limit="all" include="count.posts" order="name asc" filter="slug:-faq"}}
                 {{#foreach tags}}
                     <li id="{{slug}}"><a href="{{url}}">{{name}}</a>
                         <ul>
