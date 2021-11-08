@@ -15,11 +15,13 @@
                         {{/if}}
                         <div class="card-content">
                             <h2 class="h3 topic-name"><a href="{{url}}">{{name}}</a></h2>
-                            {{#if description}}
+                            {{!#if description}}
+                            <!--
                             <p class="topic-description">
-                                {{description}}
+                                {{!description}}
                             </p>
-                            {{/if}}
+                            -->
+                            {{!/if}}
                             <ul class="topic-post-list">
                             {{#get "posts" filter="tag:{{slug}}+visibility:[public,members,paid]" limit="3" order="published_at asc"}}
                             {{#foreach posts visibility="all"}}
