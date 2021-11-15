@@ -84,10 +84,10 @@ h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
         position: absolute;
         left: -20px;
         top: 0;
-        opacity: 0.4;
+        // opacity: 0.4;
         &:hover {
-            opacity: 1;
-            text-decoration: none;
+           // opacity: 1;
+            text-decoration: underline;
         }
         svg {
             width: 18px;
@@ -99,7 +99,8 @@ h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
 }
 a, a:hover, a:focus {
     text-decoration: none;
-    color: var(--theme-color);
+    // color: #000;
+    text-decoration: underline;
     outline: 0;
     transition: all 0.25s;
 }
@@ -141,8 +142,8 @@ svg {
 }
 
 .btn-primary, .btn-primary.disabled, .btn-primary:disabled, input[type='submit']  {
-    background-color: var(--theme-color);
-    border-color: var(--theme-color);
+    background-color: #b59051;
+    border-color: #b59051;
     color: $white;
     &:hover, &:not(:disabled):not(.disabled):active {
         background-color: var(--theme-color-lighten-10);
@@ -155,12 +156,12 @@ svg {
     }
 }
 .btn-secondary {
-    background-color: var(--text-color-dark);
-    border-color: var(--text-color-dark);
+    background-color: #333333;
+    border-color: #333333;
     color: $white;
     &:hover, &:not(:disabled):not(.disabled):active {
-        background-color: var(--theme-color);
-        border-color: var(--theme-color);
+        background-color: #000;
+        border-color: #000;
         color: $white;
     }
     &:focus, &:not(:disabled):not(.disabled):active:focus {
@@ -169,8 +170,8 @@ svg {
     }
 }
 .btn-outline-primary {
-    color: var(--theme-color);
-    border-color: var(--theme-color);
+    color: #b59051;
+    border-color: #b59051;
     &:hover, &:not(:disabled):not(.disabled):active {
         color: #000;
         background-color: var(--theme-color);
@@ -181,12 +182,12 @@ svg {
     }
 }
 .btn-outline-secondary {
-    color: var(--text-color-light);
-    border-color: var(--text-color-light);
+    color: #333333;
+    border-color: #333333;
     &:hover, &:not(:disabled):not(.disabled):active {
         color: #000;
-        background-color: var(--theme-color);
-        border-color: var(--theme-color);
+        background-color: #333333;
+        border-color: #333333;
     }
     &:focus, &:not(:disabled):not(.disabled):active:focus {
         box-shadow: 0 0 0 2px rgba(var(--theme-color), 0.4);
@@ -249,11 +250,11 @@ input[type='text'], input[type='email'], input[type='url'], textarea {
     line-height: 1.5;
     margin-bottom: 1.5rem;
     padding: 0px 16px;
-    color: var(--text-color-normal);
+    color: #333333;
 	&:focus {
         background: transparent;
         border: 1px solid var(--theme-color);
-        color: var(--text-color-normal);
+        color: #333333;
 		outline: none;
 		box-shadow: none;
     }
@@ -292,7 +293,7 @@ blockquote {
     line-height: 1.5;
     padding: 1.5rem;
     margin: 2.5rem 0;
-    color: var(--text-color-dark);
+    color: #333333;
     // font-style: italic;
     // margin-bottom: 3rem;
     border-left: 4px solid var(--theme-color);
