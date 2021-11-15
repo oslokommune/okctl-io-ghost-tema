@@ -417,7 +417,7 @@ hr {
     &.visible {
         right: 20px;
         visibility: visible;
-        opacity: 1;
+        // opacity: 1;
         transform: translate3d(0, 0, 0);
     }
 }
