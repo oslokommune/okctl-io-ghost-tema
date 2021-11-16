@@ -98,9 +98,9 @@ h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
     }
 }
 a, a:hover, a:focus {
-    text-decoration: none;
-    // color: #000;
     text-decoration: underline;
+    // color: #000;
+    // text-decoration: underline;
     outline: 0;
     transition: all 0.25s;
 }
