@@ -22,6 +22,11 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .h1 a, .h2 a, .h3 a, .h4 a, .h5 a, .h6 a {
+    text-decoration: none; // Disable underline for H1 links
+}
+
 // h1, .h1 {
 //     font-size: 2.5rem; //48
 // }
@@ -87,7 +92,6 @@ h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
         // opacity: 0.4;
         &:hover {
            // opacity: 1;
-            text-decoration: none;
         }
         svg {
             width: 18px;
