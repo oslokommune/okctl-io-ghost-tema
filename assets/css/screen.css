@@ -1144,15 +1144,13 @@ svg {
 }
 
 .btn-primary {
-  background-color: red;
   background-color: var(--theme-color);
-  border-color: red;
+  border-color: #333333;
   border-color: var(--theme-color);
   color: #fff;
 }
 
 .btn-primary.disabled {
-  background-color: red;
   background-color: var(--theme-color);
   border-color: red;
   border-color: var(--theme-color);
@@ -1176,9 +1174,8 @@ input[type='submit'] {
 }
 
 .btn-primary:hover {
-  background-color: #548ff3;
   background-color: var(--theme-color-lighten-10);
-  border-color: #548ff3;
+  border-color: #dba953;
   border-color: var(--theme-color-lighten-10);
   color: #fff;
 }
