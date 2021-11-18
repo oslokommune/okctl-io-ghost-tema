@@ -190,12 +190,12 @@ svg {
     }
 }
 .btn-outline-secondary {
-    color: #333333;
-    border-color: #333333;
+    color: var(--theme-color);
+    border-color: var(--theme-color);
     &:hover, &:not(:disabled):not(.disabled):active {
         color: #000;
-        background-color: #333333;
-        border-color: #333333;
+        background-color: var(--theme-color);
+        border-color: var(--theme-color);
     }
     &:focus, &:not(:disabled):not(.disabled):active:focus {
         box-shadow: 0 0 0 2px rgba(var(--theme-color), 0.4);
