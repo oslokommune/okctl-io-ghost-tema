@@ -12,7 +12,7 @@
                 </div> -->
                 {{/tag}}
                 <div class="post-list-wrap">
-                    {{#get "posts" filter="tag:{{tag.slug}}" limit="all" order="published_at asc"}}
+                    {{#get "posts" filter="tag:{{tag.slug}}" limit="all" order="codeinjection_foot asc"}}
                     {{#foreach posts visibility="all"}}
                     <div class="post-card">
                         <a href="{{url}}">
