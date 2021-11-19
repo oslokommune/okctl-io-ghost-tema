@@ -8,7 +8,7 @@
                 {{#foreach tags}}
                     <li id="{{slug}}"><a href="{{url}}">{{name}}</a>
                         <ul>
-                        {{#get "posts" filter="tag:{{slug}}" limit="all" order="published_at asc"}}
+                        {{#get "posts" filter="tag:{{slug}}" limit="all" order="codeinjection_foot desc"}}
                         {{#foreach posts visibility="all"}}
                         <li id="{{comment_id}}" class="post-link"><a href="{{url}}">{{title}}</a></li>
                         {{/foreach}}
