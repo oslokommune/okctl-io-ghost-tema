@@ -16,6 +16,7 @@
 
 .logo:hover {
     border-bottom: 3px solid black;
+    padding-bottom: -3px;
 }
 
 .logo-text {
@@ -30,8 +31,9 @@
 }
 .logo-image {
     max-height: 40px;
-    margin-bottom: 5px;
+    padding-bottom: 5px;
 }
+
 .nav-list {
     padding: 0;
     margin: 0;
