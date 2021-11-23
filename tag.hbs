@@ -15,11 +15,13 @@
                     {{#get "posts" filter="tag:{{tag.slug}}" limit="all" order="codeinjection_foot desc"}}
                     <script>
                         let thing = 0;
+                        let thing2 = {{{json posts}}}
                     </script>
                         {{#foreach posts visibility="all"}}
                         <script>
                             thing++;
                             console.log(thing)
+                            console.log(thing2)
                         </script>
                     <div class="post-card">
                         <a href="{{url}}">
