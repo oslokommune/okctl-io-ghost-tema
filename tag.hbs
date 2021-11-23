@@ -13,7 +13,14 @@
                 {{/tag}}
                 <div class="post-list-wrap">
                     {{#get "posts" filter="tag:{{tag.slug}}" limit="all" order="codeinjection_foot desc"}}
-                    {{#foreach posts visibility="all"}}
+                    <script>
+                        let thing = 0;
+                    </script>
+                        {{#foreach posts visibility="all"}}
+                        <script>
+                            thing++;
+                            console.log(thing)
+                        </script>
                     <div class="post-card">
                         <a href="{{url}}">
                             <h2 class="post-title h4">{{title}}{{> icons/arrow-forward}}</h2>
