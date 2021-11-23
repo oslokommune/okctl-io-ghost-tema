@@ -15,7 +15,7 @@
                     {{#get "posts" filter="tag:{{tag.slug}}" limit="all" order="codeinjection_foot desc"}}
                     <script>
                         let thing = 0;
-                        let thing2 = {{{json posts}}}
+                        let thing2 = {{json posts}}
                     </script>
                         {{#foreach posts visibility="all"}}
                         <script>
