@@ -15,13 +15,12 @@
                     {{#get "posts" filter="tag:{{tag.slug}}" limit="all" order="codeinjection_foot desc"}}
                     <script>
                         let thing = 0;
-                        let thing2 = {{posts}}
+                        let posts = ["{{#get "posts" filter="tag:{{tag.slug}}" limit="all"}}"]
                     </script>
                         {{#foreach posts visibility="all"}}
                         <script>
                             thing++;
-                            console.log(thing)
-                            console.log(thing2)
+                            console.log(posts)
                         </script>
                     <div class="post-card">
                         <a href="{{url}}">
