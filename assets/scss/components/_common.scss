@@ -327,6 +327,14 @@ img {
     display: block;
     max-width: 100%;
 }
+
+figure.kg-card.kg-image-card.kg-width-full img {
+    width: 100%;
+  }
+figure.kg-card.kg-image-card.kg-width-wide img {
+    width: 80%;
+}
+
 figure {
     margin: 2rem 0px 2rem 0px;
 }
