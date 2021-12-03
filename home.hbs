@@ -4,7 +4,7 @@
     <section class="section-topic">
         <div class="container">
             <div class="row">
-                {{#get "tags" limit="all" include="count.posts" order="published_at asc" filter="slug:-faq"}}
+                {{#get "tags" limit="all" include="count.posts" order="published_at asc" filter="slug:blog"}}
                 {{#foreach tags}}
                 <div class="col-lg-6 js-cards abc{{^has number="1,2,3,4"}} hidden{{/has}}">
                     <div class="topic-card{{#if feature_image}} has-image{{/if}}">
