@@ -26,45 +26,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .h1 a, .h2 a, .h3 a, .h4 a, .h5 a, .h6 a {
     text-decoration: none; // Disable underline for H1 links
 }
-
-// h1, .h1 {
-//     font-size: 2.5rem; //48
-// }
-// h2, .h2 {
-//     font-size: 2rem; //40
-// }
-// h3, .h3 {
-//     font-size: 1.75rem; //32
-// }
-// h4, .h4 {
-//     font-size: 1.5rem; //24
-// }
-// h5, .h5 {
-//     font-size: 1.125rem; //18
-// }
-// h6, .h6 {
-//     font-size: 0.875rem; //14
-// }
-// @media (min-width: 768px) {
-    // h1, .h1 {
-    //     font-size: 3rem; //48
-    // }
-    // h2, .h2 {
-    //     font-size: 2.25rem; //40
-    // }
-    // h3, .h3 {
-    //     font-size: 1.75rem; //32
-    // }
-    // h4, .h4 {
-    //     font-size: 1.5rem; //24
-    // }
-    // h5, .h5 {
-    //     font-size: 1.125rem; //18
-    // }
-    // h6, .h6 {
-    //     font-size: 0.875rem; //14
-    // }
-// }
 h1, .h1 {
     font-size: 2.75rem; //44
 }
@@ -142,13 +103,6 @@ svg {
         height: 18px;
     }
 }
-// .btn-rounded {
-//     border-radius: 60px;
-// }
-// .btn-lg {
-//     line-height: 64px;
-//     font-size: 1.25rem;
-// }
 .btn-sm {
     line-height: 30px;
 }
@@ -282,23 +236,6 @@ textarea {
     height: auto;
     padding: 16px;
 }
-// figure {
-//     margin-bottom: 2rem;
-// }
-// figcaption {
-//     font-size: 1rem;
-//     text-align: center;
-//     margin-top: 8px;
-//     font-family: $font-family;
-// }
-// .form-control {
-//     padding: 0px 1.75rem;
-//     line-height: 60px;
-//     height: 60px;
-// }
-// .form-control-lg {
-//     padding: 1rem 2rem;
-// }
 blockquote {
     font-family: $font-family;
     font-size: 1.5rem;
