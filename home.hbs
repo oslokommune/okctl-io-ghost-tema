@@ -6,45 +6,40 @@
             <div class="row">
                 {{#get "tags" limit="all" include="count.posts" order="published_at asc" filter="slug:blog"}}
                 {{#foreach tags}}
-                <div class="col-lg-6 js-cards abc{{^has number="1,2,3,4"}} hidden{{/has}}">
-                    <div class="topic-card{{#if feature_image}} has-image{{/if}}">
-                        {{#if feature_image}}
-                        <div class="featured-image-wrap">
-                            <img src="{{feature_image}}" alt="{{name}}" class="topic-image">
-                        </div>
-                        {{/if}}
-                        <div class="card-content">
-                            <h2 class="h3 topic-name"><a href="{{url}}">{{name}}</a></h2>
-                            {{!#if description}}
-                            <!--
-                            <p class="topic-description">
-                                {{!description}}
-                            </p>
-                            -->
-                            {{!/if}}
-                            <ul class="topic-post-list">
-                            {{#get "posts" filter="tag:{{slug}}+visibility:[public,members,paid]" limit="3" order="published_at asc"}}
-                            {{#foreach posts visibility="all"}}
-                            <li>{{> icons/file-text-outline}}<a href="{{url}}">{{title}}</a></li>
+                    {{#get "posts" include="authors" filter="tag:{{slug}}+visibility:[public,members,paid]" limit="3" order="published_at asc"}}
+                    {{#foreach posts visibility="all"}}
+                     <div class="col-lg-4">
+                        
+                     
+                        
+                        <div class="topic-card{{#if feature_image}} has-image{{/if}}">
+                            <p style="color:green">Blog <br />
+                            {{#foreach authors}}
+                                {{name}}  
                             {{/foreach}}
-                            {{/get}}
-                            </ul>
-                            <div class="topic-archive-link">
-                                <a href="{{url}}">{{t "See all"}} ({{count.posts}}){{> icons/arrow-forward}}</a>
+                            <time style="color:gray" datetime="{{date format="YYYY-MM-DD"}}">
+                                {{date published_at timeago="true"}}
+                            </time>
+                             </p>
+                            {{#if feature_image}}
+                            <div class="featured-image-wrap">
+                                <img src="{{feature_image}}" alt="{{name}}" class="topic-image">
+                            </div>
+                            {{/if}}
+                            <div class="card-content">
+                                <h2 class="h3 topic-name"><a href="{{url}}">{{title}}</a></h2>
+                                {{#if excerpt}}
+                                <p class="topic-description">
+                                    {{excerpt}}
+                                </p>
+                                {{/if}}
                             </div>
                         </div>
                     </div>
-                </div>
-                    
+                    {{/foreach}}
+                    {{/get}}
                 {{/foreach}}
                 {{/get}}
-                
-                
-                <div class="col-12">
-                    <div class="text-center">
-                        <a href="javascript:void(0)" class="btn btn-primary see-all js-show-all-topic" id="js-show-all-topic">{{t "Show all topic"}}</a>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
