@@ -19,6 +19,17 @@
                         <img src="{{feature_image}}" alt="" class="feature-image">
                     </div>
                     {{/if}}
+
+                    {{#has tag="Blog"}}
+                        <span class="blog-meta">
+                            {{#foreach authors limit="1"}}
+                                {{name}}
+                            {{/foreach}}
+                        </span>
+                        <time class="blog-time" datetime="{{date format="YYYY-MM-DD"}}">
+                            {{date published_at timeago="true"}} - {{reading_time}}
+                        </time>
+                    {{/has}}
                     {{#if access}}
                     <!--
                     <div class="toc-wrap" id="toc-wrap">
