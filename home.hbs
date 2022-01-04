@@ -1,20 +1,5 @@
 {{!< default}}
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
-<style>
-    .featured-image-wrap img {
-        height: 200px;
-        margin: 0 auto;
-    }
-    .featured-image-wrap {
-        border: solid 1px black;
-    }
-    .blog-info {
-        color: #067934
-    }
-    .blog-meta-time {
-        color: #666666
-    }
-</style>
 <div class="main">
     <section class="section-topic">
         <div class="container">
@@ -29,15 +14,14 @@
                             <img src="{{feature_image}}" alt="{{name}}" class="topic-image">
                         </div>
                         {{/if}}
-                        <p class="blog-info">Blog <br />
+                        <span class="text-color-blog">Blog <br />
                         {{#foreach authors limit="1"}}
                             {{name}}
                         {{/foreach}}
-                        <time class="blog-meta-tima" datetime="{{date format="YYYY-MM-DD"}}">
+                        </span>
+                        <time class="text-color-light" datetime="{{date format="YYYY-MM-DD"}}">
                             {{date published_at timeago="true"}} - {{reading_time}}
                         </time>
-                            </p>
-                        
                         <div class="card-content">
                             <h2 class="h3 topic-name"><a href="{{url}}">{{title}}</a></h2>
                             {{#if excerpt}}
