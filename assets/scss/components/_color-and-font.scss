@@ -34,3 +34,7 @@ $white: #fff;
         --#{$name}: #{$value};
     }
 }
+
+a:visited {
+    color: inherit;
+}
