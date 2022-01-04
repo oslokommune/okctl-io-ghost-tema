@@ -14,12 +14,12 @@
                             <img src="{{feature_image}}" alt="{{name}}" class="topic-image">
                         </div>
                         {{/if}}
-                        <span class="text-color-blog">Blog <br />
+                        <span class="blog-meta">Blog <br />
                         {{#foreach authors limit="1"}}
                             {{name}}
                         {{/foreach}}
                         </span>
-                        <time class="text-color-light" datetime="{{date format="YYYY-MM-DD"}}">
+                        <time class="blog-time" datetime="{{date format="YYYY-MM-DD"}}">
                             {{date published_at timeago="true"}} - {{reading_time}}
                         </time>
                         <div class="card-content">
