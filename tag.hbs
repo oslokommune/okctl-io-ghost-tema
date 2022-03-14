@@ -12,10 +12,10 @@
                 </div> -->
                 {{/tag}}
                 <div class="post-list-wrap">
-                    {{#if filter="tag:blog"}}
-                        {{#get "posts" filter="tag:{{tag.slug}}" limit="all" order="created_at asc"}}
+                    {{#if (filter="tag:blog")}}
+                        thing
                     {{else}}
-                        {{#get "posts" filter="tag:{{tag.slug}}" limit="all" order="codeinjection_foot asc"}}
+                        other thing
                     {{/if}}
 
                     {{#get "posts" filter="tag:{{tag.slug}}" limit="all" order="codeinjection_foot asc"}}
