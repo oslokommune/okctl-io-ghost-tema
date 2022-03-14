@@ -12,6 +12,12 @@
                 </div> -->
                 {{/tag}}
                 <div class="post-list-wrap">
+                    {{#if filter="tag:blog"}}
+                        {{#get "posts" filter="tag:{{tag.slug}}" limit="all" order="created_at asc"}}
+                    {{else}}
+                        {{#get "posts" filter="tag:{{tag.slug}}" limit="all" order="codeinjection_foot asc"}}
+                    {{/if}}
+
                     {{#get "posts" filter="tag:{{tag.slug}}" limit="all" order="codeinjection_foot asc"}}
                         {{#foreach posts visibility="all"}}
 
