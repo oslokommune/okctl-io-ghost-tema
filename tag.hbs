@@ -12,6 +12,11 @@
                 </div> -->
                 {{/tag}}
                 <div class="post-list-wrap">
+                    {{#if featured}}
+                        <div style="color:red">&nbsp;</div>
+                    {{else}}
+                        <div style="color:green">&nbsp;</div>
+                    {{/if}}
 
                     {{#get "posts" filter="tag:{{tag.slug}}" limit="all" order="codeinjection_foot asc"}}
                         {{#foreach posts visibility="all"}}
