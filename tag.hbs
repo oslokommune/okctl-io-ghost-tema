@@ -13,14 +13,13 @@
                 {{/tag}}
                 <div class="post-list-wrap">
                     {{#if tag slug="blog"}}
-                        <div style="color:red">&nbsp;</div>
+                        {{get "posts" filter="tag:{{tag.slug}}" limit="all" order="published_at desc"}}
                     {{else}}
-                        <div style="color:green">&nbsp;</div>
+                        {{get "posts" filter="tag:{{tag.slug}}" limit="all" order="codeinjection_foot asc"}}
                     {{/if}}
 
-                    {{#get "posts" filter="tag:{{tag.slug}}" limit="all" order="codeinjection_foot asc"}}
-                        {{#foreach posts visibility="all"}}
 
+                        {{#foreach posts visibility="all"}}
                     <div class="post-card">
                         <a href="{{url}}">
                             <h2 class="post-title h4">{{title}}{{> icons/arrow-forward}}</h2>
