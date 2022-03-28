@@ -1,8 +1,8 @@
 {
-    "name": "OKCTL.io",
-    "description": "Customized version of Digidocs, made for okctl.io",
+    "name": "digidocs",
+    "description": "Minimal personal blog theme",
     "demo": "http://digidocs.gbjsolution.com",
-    "version": "2.0.1.3",
+    "version": "2.0.3",
     "engines": {
         "ghost": ">=4.0.0",
         "ghost-api": "v4"
@@ -12,10 +12,6 @@
         "mobile": "assets/screenshot-mobile.jpg"
     },
     "author": {
-        "name": "Oslo Kommune, Team Kjøremiljø",
-        "url": "https://okctl.io"
-    },
-    "originalAuthor": {
         "name": "GBJ solution",
         "email": "gbjsolution@gmail.com",
         "url": "https://gbjsolution.com"
