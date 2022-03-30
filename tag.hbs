@@ -16,13 +16,24 @@
                         {{#has slug="blog"}}
                             {{#get "posts" filter="tag:{{slug}}" limit="all" order="published_at desc"}}
                                 {{#foreach posts visibility="all"}}
-                                        <div class="post-card">
-                                            <a href="{{url}}">
-                                                <h2 class="post-title h4">{{title}}{{> icons/arrow-forward}}</h2>
-                                                <div class="excerpt">
-                                                    {{excerpt}}
-                                                </div>
-                                            </a>
+                                        <div class="post-card" style="display: flex;">
+                                            <div class="post-card-left" style="flex: 20%; padding: 1em;">
+                                                <img src="{{img_url feature_image size="xxs"}}">
+                                            </div>
+                                            <div class="post-card-right" style="flex: 80%;">
+                                                <a href="{{url}}">
+                                                    <h2 class="post-title h4">
+                                                        {{title}}{{> icons/arrow-forward}}
+                                                        <br >
+                                                        <span style="color: grey; font-size: 0.8em;">{{date published_at format="MMMM DD, YYYY"}}</span>
+                                                    </h2>
+                                                    <div class="excerpt" style="margin-top: -5px;">
+                                                        {{excerpt}}
+
+                                                    </div>
+                                                </a>
+                                            </div>
+
                                         </div>
                                 {{/foreach}}
                             {{/get}}
