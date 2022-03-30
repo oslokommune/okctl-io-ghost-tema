@@ -14,18 +14,18 @@
                 <div class="post-list-wrap">
                     {{#tag}}
                         {{#has slug="blog"}}
-                        {{#get "posts" filter="tag:{{slug}}" limit="all" order="published_at desc"}}
-                            {{#foreach posts visibility="all"}}
-                                    <div class="post-card">
-                                        <a href="{{url}}">
-                                            <h2 class="post-title h4">{{title}}{{> icons/arrow-forward}}</h2>
-                                            <div class="excerpt">
-                                                {{excerpt}}
-                                            </div>
-                                        </a>
-                                    </div>
-                            {{/foreach}}
-                        {{/get}}
+                            {{#get "posts" filter="tag:{{slug}}" limit="all" order="published_at desc"}}
+                                {{#foreach posts visibility="all"}}
+                                        <div class="post-card">
+                                            <a href="{{url}}">
+                                                <h2 class="post-title h4">{{title}}{{> icons/arrow-forward}}</h2>
+                                                <div class="excerpt">
+                                                    {{excerpt}}
+                                                </div>
+                                            </a>
+                                        </div>
+                                {{/foreach}}
+                            {{/get}}
                     {{else}}
                         {{#get "posts" filter="tag:{{slug}}" limit="all" order="codeinjection_foot asc"}}
                             {{#foreach posts visibility="all"}}
