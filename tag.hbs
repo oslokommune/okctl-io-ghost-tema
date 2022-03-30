@@ -10,10 +10,12 @@
                 <!-- <div class="topic-description">
                     {{! description}}
                 </div> -->
+                    {{slug}} <!-- FIXME -->
                 {{/tag}}
                 <div class="post-list-wrap">
-                    {{#if tag slug="blog"}}
-                        {{#get "posts" filter="tag:{{tag.slug}}" limit="all" order="published_at desc"}}
+                    {{#tag}}
+                        {{#has slug="blog"}}
+                        {{#get "posts" filter="tag:{{slug}}" limit="all" order="published_at desc"}}
                             {{#foreach posts visibility="all"}}
                                     <div class="post-card">
                                         <a href="{{url}}">
@@ -26,8 +28,9 @@
                             {{/foreach}}
                         {{/get}}
                     {{else}}
-                        {{#get "posts" filter="tag:{{tag.slug}}" limit="all" order="codeinjection_foot asc"}}
+                        {{#get "posts" filter="tag:{{slug}}" limit="all" order="codeinjection_foot asc"}}
                             {{#foreach posts visibility="all"}}
+                                {{log tags}}
                                     <div class="post-card">
                                         <a href="{{url}}">
                                             <h2 class="post-title h4">{{title}}{{> icons/arrow-forward}}</h2>
@@ -38,8 +41,11 @@
                                     </div>
                             {{/foreach}}
                         {{/get}}
-                    {{/if}}
+                    {{/has}}
+                    {{/tag}}
+
                 </div>
+
             </div>
         </div>
     </div>
